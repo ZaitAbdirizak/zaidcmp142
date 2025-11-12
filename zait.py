@@ -5,7 +5,7 @@ class Book:
     self.title = "python guide"
     self.author = "jake"
 
-f1 = Books()
+f1 = Book()
 f1.title = "python guide"
 f1.author = "jake"
 print(f1.title)
@@ -73,6 +73,25 @@ d.Open()
 d.Clean()
 d.Arrange()
 
+
+#using Method overlording (compile-time polymorphism)
+
+class libraryweb:
+  def Register(self, name):
+    print(f'Registered librarian: {name}")
+
+
+  def Register(self, name, book):
+    print(f"Registered librarian: {name} for book: {book}")
+
+
+  def Register(self, name, book, date):
+    print(f"Registered librarian: {name} for {book} in date {date}")
+
+library = libraryweb()
+library.register("jake", "game of thrones", "12")
+
+    
 
     
 
